@@ -23,7 +23,7 @@
 				<label for="gubun">구분</label>
 				<select name="gubun" id="gubun">
 					<option value="1">긴급</option>
-					<option value="2">일반</option>
+					<option value="2" selected>일반</option>
 				</select>
 			</div>
 			<div>

@@ -56,7 +56,8 @@ public class NoticeServiceImpl implements NoticeService {
 	// 파라미터 notice_no가 전달되지 않았다면 notice_no=0을 사용하여 notice 테이블에서 삭제하고, 삭제 결과를 반환하시오.
 	@Override
 	public int removeNotice(HttpServletRequest request) {
-		int notice_no = Integer.parseInt(request.getParameter("notice_no"));
+		Optional<String> opt = Optional.ofNullable(request.getParameter("notice_no"));
+		int notice_no = Integer.parseInt(opt.orElse("0"));
 		return noticeDAO.removeNotice(notice_no);
 	}
 

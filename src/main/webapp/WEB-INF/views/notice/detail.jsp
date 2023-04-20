@@ -46,7 +46,7 @@
 
 	<div id="detail_screen">
 		<h1>${notice.notice_no}번 공지사항</h1>
-		<div>구분: ${notice.gubun == '1' ? '긴급' : '일반'}</div>
+		<div>구분: ${notice.gubun == 1 ? '긴급' : '일반'}</div>
 		<div>제목: ${notice.title}</div>
 		<div>${notice.content}</div>
 		<hr>
